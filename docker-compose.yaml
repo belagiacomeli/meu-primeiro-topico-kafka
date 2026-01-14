@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:16-alpine  # Versão leve baseada em Alpine Linux
+    container_name: meu_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin           # Seu usuário
+      POSTGRES_PASSWORD: admin_password  # Sua senha
+      POSTGRES_DB: meu_banco         # Nome do banco criado automaticamente
+    ports:
+      - "5432:5432"                  # Porta Host:Porta Container
